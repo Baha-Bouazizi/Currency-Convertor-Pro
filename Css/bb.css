@@ -1,0 +1,81 @@
+/* styles.css */
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #2196F3;
+    color: #fff;
+}
+
+/* Variation Cell */
+.variation {
+    display: flex;
+    align-items: center;
+}
+
+.arrow {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.increase .arrow {
+    background-image: url('https://example.com/arrow-up-green.png'); /* Remplacez par le lien de votre flèche verte */
+}
+
+.decrease .arrow {
+    background-image: url('https://example.com/arrow-down-red.png'); /* Remplacez par le lien de votre flèche rouge */
+}
+
+.constant .arrow {
+    background-image: url('https://example.com/arrow-right-orange.png'); /* Remplacez par le lien de votre flèche orange */
+}
+
+.variation-text {
+    font-size: 16px;
+}
+
+.increase .variation-text {
+    color: green;
+}
+
+.decrease .variation-text {
+    color: red;
+}
+
+.constant .variation-text {
+    color: orange;
+}

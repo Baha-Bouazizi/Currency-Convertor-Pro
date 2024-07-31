@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Body */
+body {
+  background-color: #f8f8f8;
+  color: #333;
+  background-image: url('https://media.istockphoto.com/id/818517624/fr/photo/tableau-graphique-de-monde-currency-exchange.jpg?s=612x612&w=0&k=20&c=tyJKFdry61wJvZCk5jnD-PymhhrBLxMLU0UHDynwrU0=');
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation */
+nav {
+  height: 70px;
+  background: #1d3461; /* Couleur sombre pour la nav bar */
+  color: #f8f8f8; /* Couleur de texte clair pour contraste */
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav .logo h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #f8f8f8;
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+}
+
+.nav-items ul {
+  list-style: none;
+  display: flex;
+}
+
+.nav-items ul.overview {
+  margin-right: auto;
+}
+
+.nav-items ul li {
+  margin: 0 10px;
+}
+
+.nav-items ul li a {
+  color: #f8f8f8;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 10px;
+}
+
+.nav-items ul li a:hover {
+  background-color: #4a90e2; /* Couleur de survol */
+  border-radius: 4px;
+}
+
+.nav-items ul.account {
+  display: flex;
+  align-items: center;
+}
+
+.nav-items ul.account li {
+  margin: 0 10px;
+}
+
+.nav-items ul.account select {
+  border: none;
+  background-color: #fff;
+  color: #333;
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 0.875rem;
+}
+
+/* Main Container */
+.main-container {
+  max-width: 70%;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #4a90e2;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-amount {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.select-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.select-container select {
+  width: 48%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.swap-btn {
+  cursor: pointer;
+  margin: 0 10px;
+  background-color: #fff;
+  border: 1px solid #1d3461;
+  padding: 8px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swap-btn svg {
+  width: 24px;
+  height: 24px;
+  stroke: #1d3461;
+}
+
+.result {
+  font-size: 24px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.chart-container {
+  margin-top: 30px;
+}
+
+/* Buttons */
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  margin: 20px auto;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#notification-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.notification {
+  background-color: #fff;
+  color: #333;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+.notification.success {
+  border-left: 5px solid #4CAF50;
+}
+
+.notification.error {
+  border-left: 5px solid #f44336;
+}
+/*les paire par rapport dollar*/
+/* Styles pour le conteneur des cartes */
+/* Conteneur principal des paires de devises */
+.ag-format-container {
+  max-width: 70%;
+  margin: 50px auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white; /* Ajout d'un fond blanc pour mieux s'intégrer avec le reste */
+  border-radius: 8px; /* Coins arrondis pour la cohérence */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère pour se démarquer */
+}
+
+/* Styles pour les cartes */
+.ag-format-container {
+  width: 70%; /* Réduit la largeur pour s'adapter à la mise en page globale */
+  max-width: 1142px;
+  margin: 50px auto; /* Ajoute une marge en haut et en bas */
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ag-courses_box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px; /* Espacement entre les cartes */
+  justify-content: center; /* Centre les cartes horizontalement */
+  padding: 0;
+}
+
+.ag-courses_item {
+  flex: 1 1 calc(33.33333% - 30px); /* Trois cartes par ligne */
+  margin: 0 15px 30px;
+  border-radius: 12px; /* Bordures arrondies plus douces */
+  overflow: hidden;
+  background-color: #ffffff; /* Fond blanc pour les cartes */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce pour les cartes */
+}
+
+.ag-courses-item_link {
+  display: block;
+  padding: 20px;
+  background-color: #1d3461; /* Couleur d'arrière-plan sombre */
+  color: #fff; /* Couleur du texte blanc */
+  text-decoration: none;
+  overflow: hidden;
+  position: relative;
+  height: 100%; /* Assure que le lien occupe toute la hauteur de la carte */
+}
+
+.ag-courses-item_link:hover {
+  background-color: #4a90e2; /* Couleur de survol pour le lien */
+}
+
+.ag-courses-item_title {
+  font-size: 22px; /* Ajuste la taille de la police */
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.ag-courses-item_date-box {
+  font-size: 16px;
+  color: #fff;
+}
+
+.ag-courses-item_date {
+  font-weight: bold;
+  color: #f9b234; /* Couleur d'accent pour les dates */
+}
+
+.ag-courses-item_bg {
+  height: 128px;
+  width: 128px;
+  background-color: #f9b234; /* Couleur d'accent pour les arrière-plans */
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  border-radius: 50%;
+  transition: all .5s ease;
+}
+
+
+@media only screen and (max-width: 979px) {
+  .ag-courses_item {
+    flex: 1 1 calc(50% - 30px); /* Deux cartes par ligne sur les écrans plus petits */
+  }
+  .ag-courses-item_title {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .ag-format-container {
+    width: 96%; /* Ajuste la largeur pour les petits écrans */
+  }
+}
+
+@media only screen and (max-width: 639px) {
+  .ag-courses_item {
+    flex: 1 1 100%; /* Une carte par ligne sur les petits écrans */
+  }
+  .ag-courses-item_title {
+    font-size: 18px;
+  }
+  .ag-courses-item_link {
+    padding: 15px;
+  }
+  .ag-courses-item_date-box {
+    font-size: 14px;
+  }
+}
+/*style pour la adte*/
+.result {
+  color: #FFF; /* Couleur du texte */
+  font-family: Arial, sans-serif; /* Police du texte */
+}
+
+.result-value {
+  font-size: 20px; /* Taille de la police pour le résultat de la conversion */
+  font-weight: bold; /* Poids de la police */
+  color: #f9b234; /* Couleur du texte pour le résultat */
+}
+
+.result-date {
+  font-size: 14px; /* Taille de la police pour la date */
+  color: #ccc; /* Couleur du texte pour la date */
+  display: block; /* Affiche la date sur une nouvelle ligne */
+  margin-top: 5px; /* Espacement au-dessus de la date */
+}

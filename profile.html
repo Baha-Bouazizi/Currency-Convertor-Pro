@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="Css/profile.css">
+    <script src="Js/profile.js" defer></script>
+    <script src="Js/history.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="login.html" id="logout-link" class="nav-btn"><i class="material-icons">logout</i> Logout</a>
+            <div class="theme-toggle-container">
+                <label class="ui-switch">
+                    <input type="checkbox" id="theme-toggle">
+                    <div class="slider">
+                        <div class="circle"></div>
+                    </div>
+                </label>
+            </div>
+            
+            <a href="profile.html" id="profile-link" class="nav-btn"><i class="material-icons">account_circle</i> Profile</a>
+        </div>
+    </nav>
+    
+    <!-- Toggle switch for dark mode -->
+   
+    <div class="profile-container" id="profile-section">
+        <header class="profile-header">
+            <img id="profile-picture" src="https://via.placeholder.com/150" alt="Profile Picture">
+            <div class="user-info">
+                <h1 id="username">John Doe</h1>
+                <p id="email">johndoe@example.com</p>
+                <button id="edit-profile" class="btn">Edit Profile</button>
+            </div>
+        </header>
+
+        <div class="profile-content">
+            <div class="card user-stats">
+                <h2>User Statistics</h2>
+                <p id="total-conversions">Total Conversions: 0</p>
+                <p id="total-amount">Total Amount Converted: 0.00</p>
+                <p id="most-frequent-currency">Most Frequently Converted Currency: None</p>
+            </div>
+
+            <div class="card location-info">
+                <h3><i class="material-icons">location_on</i> Location</h3>
+                <p id="location">New York, USA</p>
+                <h3><i class="material-icons">attach_money</i> Local Currency</h3>
+                <p id="local-currency">USD</p>
+            </div>
+            
+            <div class="card profile-actions">
+                <button id="show-history-btn" class="btn">Show Conversion History</button>
+                <button id="convert-page-btn" class="btn">Go to Converter</button>
+                <button id="view-favorites-btn" class="btn">View Favorite Currencies</button>
+            </div>
+        </div>
+
+        <div id="history-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Conversion History</h2>
+                <div class="timeline" id="history-content">
+                    <!-- Conversion history will be dynamically generated here -->
+                </div>
+            </div>
+        </div>
+
+        <div id="financial-news-widget" class="card">
+            <h3>Financial News</h3>
+            <ul id="news-list"></ul>
+        </div>
+
+        <div class="notification-container card" id="notification-container"></div>
+    </div>
+</body>
+</html>

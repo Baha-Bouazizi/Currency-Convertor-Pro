@@ -1,0 +1,219 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
+    background-image: url('https://www.expensya.com/media/ecdd4y12/gray-background-2.jpg?rmode=max&width=576&height=0&rnd=133207985731300000');
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    background-image: url('https://www.expensya.com/media/ecdd4y12/gray-background-2.jpg?rmode=max&width=576&height=0&rnd=133207985731300000');
+
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 28px;
+    color: #007bff;
+}
+
+/* Main Layout */
+.main-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 20px; /* Spacing between columns */
+}
+
+/* Main Content */
+.main-content {
+    padding: 20px;
+}
+
+/* Input Section */
+.input-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.input-section select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    margin-right: 10px;
+    flex: 1;
+}
+
+.input-section button {
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.input-section button:hover {
+    background-color: #0056b3;
+}
+
+/* Favorites List */
+#favorites-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#favorites-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+}
+
+#favorites-list .flag-icon {
+    margin-right: 10px;
+}
+
+/* CLI Section */
+#cli {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#cli-input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+#cli-execute-btn {
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #28a745;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+}
+
+#cli-execute-btn:hover {
+    background-color: #218838;
+}
+
+/* Back to Profile Button */
+#back-to-profile-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #6c757d;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+#back-to-profile-btn:hover {
+    background-color: #5a6268;
+}
+
+/* Currency Details */
+#currency-details {
+    margin-top: 20px;
+}
+
+#currency-details h2 {
+    font-size: 24px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+#currency-info {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+}
+
+/* Financial Tips */
+.financial-tips {
+    padding: 20px;
+    background-image: url('https://www.expensya.com/media/ecdd4y12/gray-background-2.jpg?rmode=max&width=576&height=0&rnd=133207985731300000');
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+}
+
+.financial-tips h1 {
+    font-size: 28px;
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#tips-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.tip {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+}
+
+.tip h4 {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.tip p {
+    color: #555;
+    font-size: 16px;
+}
+
+/* Financial Tips Icon */
+.tip::before {
+    content: "\f05a"; /* FontAwesome icon */
+    font-family: "FontAwesome";
+    color: #007bff;
+    font-size: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+}

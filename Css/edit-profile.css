@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://c8.alamy.com/compfr/hr0509/a-partir-de-la-conversion-de-devises-dollar-a-l-euro-et-vice-versa-dollar-et-euro-signe-avec-des-fleches-elegant-fond-bleu-clair-avec-des-pieces-auxiliaires-vector-hr0509.jpg');
+
+}
+
+.edit-profile-container {
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    background-image: url('https://www.expensya.com/media/ecdd4y12/gray-background-2.jpg?rmode=max&width=576&height=0&rnd=133207985731300000');
+
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="email"], input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.btn.cancel-btn {
+    background-color: #f44336;
+}
