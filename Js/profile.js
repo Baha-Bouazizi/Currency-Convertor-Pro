@@ -54,7 +54,6 @@ class Profile {
                     const data = await response.json();
                     document.getElementById('location').innerText = `${data.city}, ${data.countryName}`;
                     await this.getLocalCurrency(data.countryCode);
-                    await this.getWeather(latitude, longitude); // Fetch and display weather
                 } catch (error) {
                     console.error('Error fetching location data: ', error);
                 }
@@ -81,36 +80,9 @@ class Profile {
         }
     }
 
-    async getWeather(lat, lon) {
-        const apiKey = 'YOUR_OPENWEATHERMAP_API_KEY'; // Replace with your API key
-        try {
-            const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`);
-            if (!response.ok) throw new Error('Failed to fetch weather data.');
-            const data = await response.json();
-            this.displayWeather(data);
-        } catch (error) {
-            console.error('Error fetching weather data: ', error);
-        }
-    }
 
-    displayWeather(data) {
-        const weatherContainer = document.getElementById('weather-container');
-        if (weatherContainer) {
-            weatherContainer.innerHTML = `
-                <div class="weather-card">
-                    <div class="weather-card__icon">
-                        <img src="http://openweathermap.org/img/wn/${data.weather[0].icon}.png" alt="${data.weather[0].description}" />
-                    </div>
-                    <div class="weather-card__temp">
-                        ${Math.round(data.main.temp)}°C
-                    </div>
-                    <div class="weather-card__description">
-                        ${data.weather[0].description}
-                    </div>
-                </div>
-            `;
-        }
-    }
+
+
 
     async setupTheme() {
         const themeToggle = document.getElementById('theme-toggle');

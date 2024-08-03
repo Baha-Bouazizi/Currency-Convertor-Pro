@@ -9,6 +9,10 @@
     <script src="Js/history.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="Js/documenatation.js" defer></script>
+    <link rel="stylesheet" href="Css/documentation.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 <body>
     <nav>
@@ -27,8 +31,6 @@
         </div>
     </nav>
     
-    <!-- Toggle switch for dark mode -->
-   
     <div class="profile-container" id="profile-section">
         <header class="profile-header">
             <img id="profile-picture" src="https://via.placeholder.com/150" alt="Profile Picture">
@@ -58,6 +60,7 @@
                 <button id="show-history-btn" class="btn">Show Conversion History</button>
                 <button id="convert-page-btn" class="btn">Go to Converter</button>
                 <button id="view-favorites-btn" class="btn">View Favorite Currencies</button>
+                <button id="documentation-btn" class="btn">Read Documentation</button> <!-- Nouveau bouton -->
             </div>
         </div>
 
@@ -74,9 +77,15 @@
         <div id="financial-news-widget" class="card">
             <h3>Financial News</h3>
             <ul id="news-list"></ul>
-        </div>
-
-        <div class="notification-container card" id="notification-container"></div>
+        
     </div>
+    <h1>Currency Forecast</h1>
+    <div>
+        <canvas id="forecastChart"></canvas>
+    </div>
+  
+   <script src="Js/prev.js" defer>
+   
+</script>
 </body>
 </html>

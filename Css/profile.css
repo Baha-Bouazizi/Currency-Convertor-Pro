@@ -247,9 +247,7 @@ nav {
 }
 
 /* Financial News Widget */
-#financial-news-widget {
-    margin-top: 20px;
-}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -287,4 +285,29 @@ nav {
 /* Ajoutez ce code CSS dans votre fichier de style */
 
 
-  
+/* Financial News Widget */
+#financial-news-widget {
+    margin-top: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#financial-news-widget h3 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #333;
+}
+
+#news-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#news-list li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #555;
+}

@@ -15,8 +15,10 @@
     <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-financial" defer></script>
     <script src="https://js.stripe.com/v3/" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
-    <script src="Js/bb.js"></script>
-    <link rel="stylesheet" href="Css/bb.css">
+    <script src="Js/real.js"></script>
+    <link rel="stylesheet" href="Css/real.css">
+    <link rel="stylesheet" href="Css/near.css">
+
 
 </head>
 <body>
@@ -227,6 +229,16 @@
             <div class="result"><span class="result-currency">EUR</span> 00</div>
         </div>
         <div class="chart-container" id="chart-container">
+          <div id="time-period-buttons">
+  
+<select id="period">
+    <option value="1W">1 Week</option>
+    <option value="1M">1 Month</option>
+    <option value="1Y">1 Year</option>
+    <option value="5Y">5 Years</option>
+    <option value="10Y">10 Years</option>
+</select>
+
             <canvas id="exchangeRateChart"></canvas>
         </div>
     </div>
@@ -239,7 +251,7 @@
     </div>
 
     <div class="container">
-        <h1>Cours en Temps Réel</h1>
+        <h1>Real Time Courses</h1>
         <table id="exchange-table">
             <thead>
                 <tr>
@@ -316,5 +328,11 @@
             </tbody>
         </table>
     </div>
+    <div id="near-exchange" class="near-exchange">
+    <h1>Find Nearby Currency Exchanges</h1>
+    <button id="find-exchanges">Find Exchanges Near Me</button>
+    <ul id="exchange-list"></ul></div>
+    <script src="Js/near.js" defer></script>
+
 </body>
 </html>

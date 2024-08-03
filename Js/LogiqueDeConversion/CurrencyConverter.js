@@ -1,11 +1,11 @@
 class CurrencyConverter {
+
+
     constructor() {
         this.exchangeRates = {};
         this.previousRates = {};
         this.chart = null;
-        this.apiKeyAlphaVantage = 'X1FW6FLNQRDDM81G'; // Replace with your Alpha Vantage API key
-
-        
+        this.apiKeyAlphaVantage = '6A87GQBCVBN5HPW6'; // ll graphe wl wekly chnages
     }
 
     async fetchRates() {
@@ -70,6 +70,9 @@ class CurrencyConverter {
     
     
 
+    
+    
+
 
     calculateWeeklyChange(historicalData) {
         if (!Array.isArray(historicalData) || historicalData.length < 7) {
@@ -82,20 +85,22 @@ class CurrencyConverter {
         const change = ((latestRate - oldestRate) / oldestRate) * 100;
         return `${latestRate - oldestRate > 0 ? '+' : ''}${(latestRate - oldestRate).toFixed(4)} (${change.toFixed(2)}%)`;
     }
-    
-    
+//  Taux de Change = Montant en USD
+//      -----------------------------
+//         Taux USD/EUR
+
 
     convert(amount, fromCurrency, toCurrency) {
         if (isNaN(amount) || amount <= 0) {
-            return NaN; // Retourner NaN en cas d'entrée invalide
+            return NaN; //yaani:entréé non valide 
         }
-        const fromRate = this.exchangeRates[fromCurrency.toUpperCase()];
+        const fromRate = this.exchangeRates[fromCurrency.toUpperCase()];//form json cle baleur ou cle le code de la devise et valeur son taux par rapport dollar 
         const toRate = this.exchangeRates[toCurrency.toUpperCase()];
         if (!fromRate || !toRate) {
             return NaN; // Retourner NaN si la devise n'est pas supportée
         }
         const convertedValue = (amount / fromRate) * toRate;
-        return convertedValue; // Retourner le nombre directement
+        return convertedValue; 
     }
     
     
@@ -118,6 +123,7 @@ class CurrencyConverter {
         }
         fromCurrency.value = "usd";
         toCurrency.value = "eur";
+        this.convertAndDisplay();
         this.updateFlagIcons();
     }
 
@@ -258,6 +264,8 @@ class CurrencyConverter {
             console.error('Error updating the chart:', error.message);
         }
     }
+
+    
     ////////////////////////////////////////////
 
   
@@ -294,13 +302,13 @@ class CurrencyConverter {
         document.querySelector("#from").value = 'usd'; // USD is the base currency
         document.querySelector("#to").value = currencyCode.toLowerCase(); // Selected currency
 
-        // Update flag icons
+        
         this.updateFlagIcons();
 
         // Update the chart
         await this.updateChart(); // Ensure the chart is updated after setting the currencies
          this.convertAndDisplay() ;
-        // Scroll to the chart section
+        
      this.scrollToSelectSection() ;
     }
 
@@ -340,7 +348,7 @@ class CurrencyConverter {
                     <div class="ag-courses-item_date-box">
                         Rate: <span class="ag-courses-item_date">${pair.rate} ${pair.code.toUpperCase()}</span>
                         <br/>
-                        Change: ${pair.change}
+                        Weekly-Change: ${pair.change}
                     </div>
                     <button class="view-chart-btn" data-currency="${pair.code}">View chart</button>
                 </a>
@@ -368,12 +376,6 @@ class CurrencyConverter {
         };
         return currencyNames[code] || 'Unknown';
     }
-    
-   
-    
-   
-
-  
     
 
     //////////////////////////////////
@@ -432,7 +434,7 @@ this.scrollToChartSection        });
         }
     
         // Format du résultat de la conversion
-        const formattedResult = `${amount} ${fromCurrency.toUpperCase()} = ${result.toFixed(5)} ${toCurrency.toUpperCase()}`;
+        const formattedResult = `${amount} ${fromCurrency.toUpperCase()} = ${result.toFixed(7)} ${toCurrency.toUpperCase()}`;
         
         // Formater la date
         const now = new Date();

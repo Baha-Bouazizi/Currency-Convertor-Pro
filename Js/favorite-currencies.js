@@ -5,7 +5,21 @@ class FavoriteCurrencies {
         this.favoriteCurrencies = JSON.parse(localStorage.getItem(`favoriteCurrencies_${this.userEmail}`)) || [];
         this.currencyData = [];
         this.currencyDetails = {
-            'USD': {
+            
+            'TND': {
+        name: 'Tunisian Dinar',
+        symbol: 'د.ت',
+        minorUnit: '1/1,000 = millime',
+        minorUnitSymbol: 'millime',
+        topConversion: 'TND to USD',
+        topChart: 'TND to USD chart',
+        nicknames: 'dinar',
+        coins: 'Freq used: 5 millimes, 10 millimes, 20 millimes, 50 millimes, 1 TND; Rarely used: 2 TND',
+        bankNotes: 'Freq used: 5 TND, 10 TND, 20 TND, 50 TND; Rarely used: 1 TND (note form)',
+        centralBank: 'Central Bank of Tunisia',
+        users: 'Tunisia'
+        },
+        'USD': {
                 name: 'US Dollar',
                 symbol: '$',
                 minorUnit: '1/100 = cent',
