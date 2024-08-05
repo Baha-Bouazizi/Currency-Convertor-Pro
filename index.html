@@ -36,8 +36,7 @@
                 <!--li><a href="contact.html">Contact</a></li-->
             </ul>
             <ul class="account">
-                <!--li><a href="notifications.html">Notifications</a></li-->
-                <!--li><a href="settings.html">Settings</a></li-->
+                
                 <li id="profile-link" style="display:none;"><a href="profile.html">Profile</a></li>
                 <li>
                     <select id="lang-selector">
@@ -228,17 +227,18 @@
             </div>
             <div class="result"><span class="result-currency">EUR</span> 00</div>
         </div>
+     
         <div class="chart-container" id="chart-container">
-          <div id="time-period-buttons">
+            <select id="period">
+                <option value="1w">1 Semaine</option>
+                <option value="1m">1 Mois</option>
+                <option value="1y">1 An</option>
+               
+              </select>
   
-<select id="period">
-    <option value="1W">1 Week</option>
-    <option value="1M">1 Month</option>
-    <option value="1Y">1 Year</option>
-    <option value="5Y">5 Years</option>
-    <option value="10Y">10 Years</option>
-</select>
 
+         
+              
             <canvas id="exchangeRateChart"></canvas>
         </div>
     </div>
