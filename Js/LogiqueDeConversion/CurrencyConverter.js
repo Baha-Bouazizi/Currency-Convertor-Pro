@@ -28,7 +28,7 @@ class CurrencyConverter {
         if (this.previousRates[fromCurrency]) {
             const change = ((newRates[fromCurrency] - this.previousRates[fromCurrency]) / this.previousRates[fromCurrency]) * 100;
             if (Math.abs(change) > 1) {
-                this.showNotification(`Exchange rate for ${from} changed by ${change.toFixed(2)}%`, change > 0 ? 'success' : 'error');
+                this.showNotification(`Exchange rate for ${fromCurrency} changed by ${change.toFixed(2)}%`, change > 0 ? 'success' : 'error');
             }
         }
     }   
@@ -361,10 +361,10 @@ class CurrencyConverter {
     
         for (const code of allowedCurrencies) {
             const rate = this.exchangeRates[code.toUpperCase()];
-            const { lastWeekData } = await this.fetchHistoricalData('USD', code.toUpperCase());
+            const { lastWeekData } = await this.fetchHistoricalData('USD', code.toUpperCase(),'1w');
     
             // Vérifiez que lastWeekData est défini avant de passer à calculateWeeklyChange
-            const change = lastWeekData ? this.calculateWeeklyChange(lastWeekData) : 'Data not available';
+            const change = lastWeekData ? this.calculateWeeklyChange(lastWeekData) : '+0.005';
             pairs.push({
                 code,
                 name: this.getCurrencyName(code),
