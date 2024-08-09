@@ -1,11 +1,4 @@
-<style>
-  body {
-    background-image: url('images/backg.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  }
-</style>
+
 
 ## Currency Conversion Platform
 
