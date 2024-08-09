@@ -48,7 +48,7 @@ class ExchangeLocator {
         this.list.innerHTML = '';
 
         if (exchanges.length === 0) {
-            this.list.innerHTML = '<li>No currency exchanges found nearby.</li>';
+            this.list.innerHTML = '<li>No currency exchanges found nearby!</li>';
             return;
         }
 
