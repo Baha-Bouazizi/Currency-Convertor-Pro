@@ -3,7 +3,7 @@
 <p align="center">
   <img src="images/isimg.jpeg" alt="Institute Logo" width="150"/>
   &nbsp;&nbsp;&nbsp;
-  <img src="images/cap.png" alt="Company Logo" width="150"/>
+  <img src="images/capp.png" alt="Company Logo" width="150"/>
 </p>
 
 ## Introduction
