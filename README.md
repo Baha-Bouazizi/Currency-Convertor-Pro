@@ -39,6 +39,17 @@ Welcome to the Currency Conversion Application, a comprehensive tool designed to
 ### 📰 Financial News
 
 - **Stay Updated**: Receive the latest news and updates that impact the global currency market.
+## 🛠 Usage Instructions
+
+Explore the key features of the application:
+
+- **Currency Converter**: Perform quick and accurate currency conversions.
+- **Exchange Rates**: View the latest exchange rates and manage your profile settings.
+
+## 🔧 Additional Functionalities
+
+- **Profile Management**: Customize your user experience by managing favorite currencies and viewing your conversion history.
+- **Real-Time Notifications**: Get notified about significant changes in exchange rates to make informed decisions.
 
 ## 🎥 Demonstration
 
@@ -68,17 +79,6 @@ To install and run the project locally, follow these steps:
 3. **Launch the Application:**
    Open `index.html` in your preferred web browser to start using the Currency Conversion Application.
 
-## 🛠 Usage Instructions
-
-Explore the key features of the application:
-
-- **Currency Converter**: Perform quick and accurate currency conversions.
-- **Exchange Rates**: View the latest exchange rates and manage your profile settings.
-
-## 🔧 Additional Functionalities
-
-- **Profile Management**: Customize your user experience by managing favorite currencies and viewing your conversion history.
-- **Real-Time Notifications**: Get notified about significant changes in exchange rates to make informed decisions.
 
 ## 🤝 Contribution Guidelines
 
