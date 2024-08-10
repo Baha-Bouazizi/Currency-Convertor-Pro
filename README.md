@@ -98,4 +98,4 @@ I would like to extend my gratitude to Capgemini Engineering for the opportunity
 
 ---
 
-Developed as part of the summer internship at Capgemini Engineering.
+***Developed as part of the summer internship at Capgemini Engineering.***
