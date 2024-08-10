@@ -36,14 +36,14 @@ The Currency Conversion Application offers the following features:
 
 ## Video Demonstration
 
-Watch this video to see the Currency Conversion Application in action:
+To see the Currency Conversion Application in action, watch the video below:
 
-[![Watch the video](images/backg.jpg)](images/CurrencyConverterApp.mp4)
+[![Watch the Video](images/video-thumbnail.jpg)](videos/CurrencyConverterApp.mp4)
 
 ## Installation
 
 To set up the project locally, follow these steps:
 
-1. **Clone the repository:**khb
+1. **Clone the repository:**
    ```bash
    git clone https://github.com/your-username/your-repository.git
