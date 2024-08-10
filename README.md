@@ -129,7 +129,5 @@ For any questions or suggestions, feel free to reach out: baha.bouazizi@isimg.tn
 Special thanks to Capgemini Engineering for the opportunity to work on this project.
 Grateful to Mr. Ben Amara Ahmed for their support and guidance.
 Developed as part of the summer internship at Capgemini Engineering.
-python
-Copier le code
 
-This Markdown file is structured for clarity and includes all necessary details for users a
+ 
