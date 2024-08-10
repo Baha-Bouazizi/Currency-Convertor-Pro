@@ -160,6 +160,7 @@ class CurrencyConverter {
             optionTo.textContent = `${code.toUpperCase()} - ${code}`;
             optionTo.setAttribute("data-flag", code.toLowerCase()); // Set flag class
             toCurrency.appendChild(optionTo);
+        
         }
         fromCurrency.value = "usd";
         toCurrency.value = "eur";
@@ -358,10 +359,9 @@ class CurrencyConverter {
     
         const allowedCurrencies = ['eur', 'gbp', 'jpy', 'cad', 'aud', 'chf', 'cny', 'zar'];
         const pairs = [];
-    
         for (const code of allowedCurrencies) {
             const rate = this.exchangeRates[code.toUpperCase()];
-            const { lastWeekData } = await this.fetchHistoricalData('USD', code.toUpperCase(),'1w');
+            const { lastWeekData } = await this.fetchHistoricalData('USD', code.toUpperCase(), '1w');
     
             // Vérifiez que lastWeekData est défini avant de passer à calculateWeeklyChange
             const change = lastWeekData ? this.calculateWeeklyChange(lastWeekData) : '+0.005';
