@@ -44,6 +44,6 @@ Watch this video to see the Currency Conversion Application in action:
 
 To set up the project locally, follow these steps:
 
-1. **Clone the repository:**
+1. **Clone the repository:**khb
    ```bash
    git clone https://github.com/your-username/your-repository.git
