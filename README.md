@@ -46,7 +46,7 @@ Experience the Currency Conversion Application in action by watching the followi
 
 <p align="center">
   <a href="https://www.youtube.com/watch?v=1MKDihVGYzI">
-    <img src="images/yout.jpg" alt="Watch the Video" width="150">
+    <img src="images/youtt.jpg" alt="Watch the Video" width="150">
   </a>
 </p>
   
