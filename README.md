@@ -38,7 +38,7 @@ The Currency Conversion Application offers the following features:
 
 To see the Currency Conversion Application in action, watch the video below:
 
-[![Watch the Video](images/video-thumbnail.jpg)](videos/CurrencyConverterApp.mp4)
+[![Watch the Video](images/video-thumbnail.jpg)](images/CurrencyConverterApp.mp4)
 
 ## Installation
 
