@@ -1,6 +1,10 @@
 
 # 💰 Currency Conversion Application
-
+<p align="center">
+  <img src="images/backg.jpg" alt="Institute Logo" width="150"/>
+  &nbsp;&nbsp;&nbsp;
+  <img src="images/backg.jpg" alt="Company Logo" width="150"/>
+</p>
 
 ## Introduction
 
