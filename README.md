@@ -1,31 +1,49 @@
+# Currency Conversion Application
 
+![Financial Overview](images/backg.jpg)
 
-## Currency Conversion Platform
+This project was developed as part of my summer internship at Capgemini Engineering. The Currency Conversion Application provides users with tools to convert currencies, view current exchange rates, find nearby currency exchange offices, and follow financial news. Users can also manage their profile, register or log in, and keep track of their conversion history.
 
-### Application Overview
+## Overview
 
-The Currency Conversion Platform is a comprehensive web application designed for converting currencies, viewing current exchange rates, finding nearby currency exchange offices, and keeping up with financial news. It offers an intuitive user interface that supports both registered and non-registered users. Registered users have access to advanced features such as managing favorite currencies and maintaining a detailed history of their conversions.
+The Currency Conversion Application offers the following features:
+- **Currency Conversion**: Convert between different currencies.
+- **Exchange Rate Consultation**: View current rates and popular currency pairs.
+- **Find Nearby Currency Exchanges**: Locate exchange offices using a location API.
+- **Financial News**: Stay updated with the latest news.
+- **Profile Management**: Register, log in, and manage personal information and conversion history.
 
-#### Key Features:
+![Currency Symbols](images/backg.jpg)
 
-- **Currency Conversion:** Convert amounts between various currencies with real-time exchange rates.
-- **View Exchange Rates:** Check the current exchange rates for all supported currencies.
-- **Find Nearby Currency Exchanges:** Locate currency exchange offices close to you using a location-based service.
-- **Financial News:** Stay updated with the latest financial news and market trends.
+## Key Features
 
-#### Profile Management:
+### Currency Converter
 
-- **Sign Up and Log In:** Users can sign up or log in to access additional functionalities.
-- **Conversion History:** Track and review a detailed history of your currency conversions.
-- **Favorite Currencies:** Manage and monitor your favorite currencies.
+- **Convert Currencies**: Convert between a variety of currencies using real-time exchange rates.
+- **Popular Currency Pairs**: View rates for commonly traded currency pairs.
 
-### Additional Features
+### Exchange Rate Consultation
 
-- **Location Services:** Provides user location to find nearby currency exchange offices.
-- **Financial News Integration:** Displays current financial news, keeping registered users informed about significant economic events.
+- **Current Rates**: Access up-to-date exchange rates for multiple currencies.
 
-### Video Overview
+### Find Nearby Currency Exchanges
 
-Watch the video below for a complete walkthrough of the Currency Conversion Platform:
+- **Location-Based Search**: Use a location API to find currency exchange offices near you.
 
-[Download the video](videos/your-video-file.mp4)
+### Financial News
+
+- **Latest Updates**: Read the latest financial news relevant to the currency market.
+
+## Video Demonstration
+
+Watch this video to see the Currency Conversion Application in action:
+
+[![Watch the video](images/backg.jpg)](images/CurrencyConverterApp.mp4)
+
+## Installation
+
+To set up the project locally, follow these steps:
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/your-username/your-repository.git
