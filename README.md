@@ -1,4 +1,4 @@
-![Background Image](images/backg.jpg)
+
 
 ## Currency Conversion Platform
 
