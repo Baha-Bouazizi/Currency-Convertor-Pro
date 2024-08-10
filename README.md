@@ -43,8 +43,8 @@ Welcome to the Currency Conversion Application, a comprehensive tool designed to
 ## 🎥 Demonstration
 
 Experience the Currency Conversion Application in action by watching the following demonstration video:
-
-[![Watch the Video](https://img.youtube.com/vi/1MKDihVGYzI/0.jpg)](https://www.youtube.com/watch?v=1MKDihVGYzI)
+<p align="center>
+[![Watch the Video](https://img.youtube.com/vi/1MKDihVGYzI/0.jpg)](https://www.youtube.com/watch?v=1MKDihVGYzI)</p>
 
 ## 🚀 Installation Guide
 
