@@ -9,10 +9,9 @@
     <script src="Js/history.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <script src="Js/documenatation.js" defer></script>
+    <script src="Js/documentation.js" defer></script>
     <link rel="stylesheet" href="Css/documentation.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
+    <script src="Js/LogiqueDeConversion/CurrencyConverter.js" defer></script>
 </head>
 <body>
     <nav>
@@ -26,7 +25,6 @@
                     </div>
                 </label>
             </div>
-            
             <a href="profile.html" id="profile-link" class="nav-btn"><i class="material-icons">account_circle</i> Profile</a>
         </div>
     </nav>
@@ -35,8 +33,8 @@
         <header class="profile-header">
             <img id="profile-picture" src="https://via.placeholder.com/150" alt="Profile Picture">
             <div class="user-info">
-                <h1 id="username">John Doe</h1>
-                <p id="email">johndoe@example.com</p>
+                <h1 id="username">Bouazizi Baha</h1>
+                <p id="email">Baha.bouaziziz@isimg.tn</p>
                 <button id="edit-profile" class="btn">Edit Profile</button>
             </div>
         </header>
@@ -51,7 +49,7 @@
 
             <div class="card location-info">
                 <h3><i class="material-icons">location_on</i> Location</h3>
-                <p id="location">New York, USA</p>
+                <p id="location">Sbeitla, Tunisie</p>
                 <h3><i class="material-icons">attach_money</i> Local Currency</h3>
                 <p id="local-currency">USD</p>
             </div>
@@ -60,6 +58,9 @@
                 <button id="show-history-btn" class="btn">Show Conversion History</button>
                 <button id="convert-page-btn" class="btn">Go to Converter</button>
                 <button id="view-favorites-btn" class="btn">View Favorite Currencies</button>
+                <!-- Dans votre fichier HTML du profil utilisateur -->
+                <button id="delete-profile" class="btn">Delete Profile</button>
+   
             </div>
         </div>
 
@@ -76,11 +77,7 @@
         <div id="financial-news-widget" class="card">
             <h3>Financial News</h3>
             <ul id="news-list"></ul>
-        
-  
+        </div>
     </div>
-  
-   
-</script>
 </body>
 </html>

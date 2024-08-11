@@ -33,7 +33,25 @@ class Profile {
         profileImage.src = user.image || "https://as1.ftcdn.net/v2/jpg/03/39/45/96/1000_F_339459697_XAFacNQmwnvJRqe1Fe9VOptPWMUxlZP8.jpg"; // Default image
 
         document.getElementById('profile-section').style.display = 'block';
+     } 
+     deleteUserProfile() {
+        if (confirm("Êtes-vous sûr de vouloir supprimer votre profil ? Cette action est irréversible.")) {
+            const user = JSON.parse(localStorage.getItem('currentUser'));
+            if (!user) {
+                alert("Aucun utilisateur connecté.");
+                return;
+            }
+    
+            // Supprimer les données utilisateur de localStorage
+            const userHistoryKey = `conversionHistory_${user.email}`;
+            localStorage.removeItem(userHistoryKey);
+            localStorage.removeItem('currentUser');
+    
+            // Rediriger vers la page d'accueil ou de connexion
+            window.location.href = 'index.html'; // Remplacez par l'URL de votre page d'accueil ou de connexion
+        }
     }
+    
 
     setupEventListeners() {
         document.getElementById('convert-page-btn').addEventListener('click', () => window.location.href = 'index.html');
@@ -42,6 +60,8 @@ class Profile {
         document.querySelector(".close").addEventListener("click", () => document.getElementById("history-modal").style.display = "none");
         document.getElementById("show-history-btn").addEventListener("click", () => this.displayHistory());
         document.getElementById('view-favorites-btn').addEventListener('click', () => window.location.href = 'favorite-currencies.html');
+        document.getElementById('delete-profile').addEventListener('click', () => this.deleteUserProfile());
+
     }
 
     async getLocation() {
