@@ -227,7 +227,6 @@ class Profile {
         const mostFrequentCurrency = Object.entries(stats.currencyCount)
             .reduce((a, b) => b[1] > a[1] ? b : a, ['', 0])[0];
     
-        document.getElementById('total-conversions').innerText = `Total Conversions: ${stats.totalConversions}`;
         document.getElementById('total-amount').innerText = `Total Amount Converted: ${stats.totalAmount.toFixed(2)}`;
         document.getElementById('most-frequent-currency').innerText = `Most Frequently Converted Currency: ${mostFrequentCurrency}`;
     }

@@ -311,3 +311,141 @@ nav {
     font-size: 16px;
     color: #555;
 }
+
+/* Style global pour le modal de l'historique */
+#history-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Couleur de fond semi-transparente */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Style pour le contenu de la timeline */
+#history-content {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.timeline__event {
+    position: relative;
+    margin-bottom: 20px;
+    padding-left: 50px;
+}
+
+.timeline__event__icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #2a9d8f;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timeline__event__date {
+    position: absolute;
+    top: 50px;
+    left: -70px;
+    color: #555;
+    font-size: 14px;
+}
+
+.timeline__event__content {
+    background-color: #e9f5f5;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.timeline__event__title {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.timeline__event__description {
+    color: #555;
+    font-size: 16px;
+}
+
+/* Animation pour les événements de la timeline */
+.animated {
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+}
+
+.fadeInUp {
+    animation-name: fadeInUp;
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0, 40px, 0);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+.delay-1s {
+    animation-delay: 1s;
+}
+
+.delay-2s {
+    animation-delay: 2s;
+}
+
+.delay-3s {
+    animation-delay: 3s;
+}
+
+/* Styles de type pour les événements alternatifs */
+.timeline__event--type1 {
+    border-left: 3px solid #e63946;
+}
+
+.timeline__event--type2 {
+    border-left: 3px solid #f4a261;
+}
+
+.timeline__event--type3 {
+    border-left: 3px solid #457b9d;
+}
+
