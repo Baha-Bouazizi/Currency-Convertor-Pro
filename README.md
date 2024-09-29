@@ -1,9 +1,9 @@
 
 # 💰 Currency Conversion Application
 <p align="center">
-  <img src="images/isimg.jpeg" alt="Institute Logo" width="150"/>
+  <img src="public/images/isimg.jpeg" alt="Institute Logo" width="150"/>
   &nbsp;&nbsp;&nbsp;
-  <img src="images/capp.png" alt="Company Logo" width="150"/>
+  <img src="public/images/capp.png" alt="Company Logo" width="150"/>
 </p>
 
 ## Introduction
@@ -57,7 +57,7 @@ Experience the Currency Conversion Application in action by watching the followi
 
 <p align="center">
   <a href="https://www.youtube.com/watch?v=1MKDihVGYzI">
-    <img src="images/youtt.jpg" alt="Watch the Video" width="150">
+    <img src="public/images/youtt.jpg" alt="Watch the Video" width="150">
   </a>
 </p>
   
