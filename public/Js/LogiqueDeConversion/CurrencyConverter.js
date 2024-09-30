@@ -355,16 +355,18 @@ class CurrencyConverter {
     }
 
     async fetchPopularPairs() {
-        await this.fetchRates(); // Assurez-vous que les taux sont récupérés en premier
+        await this.fetchRates(); // Ensure that the rates are fetched first
     
         const allowedCurrencies = ['eur', 'gbp', 'jpy', 'cad', 'aud', 'chf', 'cny', 'zar'];
         const pairs = [];
+        
         for (const code of allowedCurrencies) {
             const rate = this.exchangeRates[code.toUpperCase()];
-            const { lastWeekData } = await this.fetchHistoricalData('USD', code.toUpperCase(), '1w');
+            const { historicalData } = await this.fetchHistoricalData('USD', code.toUpperCase(), '1w'); // Fetch historical data for the last week
     
-            // Vérifiez que lastWeekData est défini avant de passer à calculateWeeklyChange
-            const change = lastWeekData ? this.calculateWeeklyChange(lastWeekData) : '+0.005';
+            // Check if historical data is defined and has enough data points
+            const change = historicalData.length >= 7 ? this.calculateWeeklyChange(historicalData) : '+0.0000'; // Default to zero change if data is insufficient
+    
             pairs.push({
                 code,
                 name: this.getCurrencyName(code),
@@ -375,7 +377,7 @@ class CurrencyConverter {
     
         const popularPairsDiv = document.getElementById('popular-pairs');
         const boxDiv = popularPairsDiv.querySelector('.ag-courses_box');
-        boxDiv.innerHTML = '';
+        boxDiv.innerHTML = ''; // Clear previous entries
     
         pairs.forEach(pair => {
             const pairDiv = document.createElement('div');
@@ -389,16 +391,17 @@ class CurrencyConverter {
                     <div class="ag-courses-item_date-box">
                         Rate: <span class="ag-courses-item_date">${pair.rate} ${pair.code.toUpperCase()}</span>
                         <br/>
-                        Weekly-Change: ${pair.change}
+                        Weekly Change: ${pair.change}
                     </div>
                     <button class="view-chart-btn" data-currency="${pair.code}">View chart</button>
                 </a>
             `;
-            boxDiv.appendChild(pairDiv);
+            boxDiv.appendChild(pairDiv); // Append the new pair div to the box
         });
     
-        this.addPairClickListeners();
+        this.addPairClickListeners(); // Attach click listeners to the new buttons
     }
+    
     
     
     
